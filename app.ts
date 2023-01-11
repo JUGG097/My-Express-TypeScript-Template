@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 // Routes
 app.get("/check", (req: Request, res: Response) => {
-	res.status(200).json({ success: true, message: "Serve is up and running" });
+	res.status(200).json({ success: true, message: "Server is up and running" });
 });
 
 // catch 404 and forward to error handler
@@ -35,9 +35,4 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
 	res.json({ success: false, error: err.message });
 });
 
-// Start the server
-app.listen(port, async () => {
-	console.log(
-		`Listening on ${port}, App is running at http://localhost:${port}`
-	);
-});
+export default app;
